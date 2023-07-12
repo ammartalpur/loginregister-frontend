@@ -22,7 +22,7 @@ export default function Register() {
     function register() {
         const { name, email, password, reEnterPassword } = user
         if (name && email && password && (password === reEnterPassword)) {
-            axios.post("http://192.168.1.102:5000/register", user).then(res => {
+            axios.post("https://loginregister-backend.vercel.app/register", user).then(res => {
                 alert(res.data.message)
                 navigate('/login')
             })

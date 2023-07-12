@@ -20,7 +20,7 @@ export default function Login({ setLoginUser }) {
         })
     }
     function login() {
-        axios.post('http://192.168.1.102:5000/login', user).then((res) => {
+        axios.post('https://loginregister-backend.vercel.app/login', user).then((res) => {
             alert(res.data.message)
             setLoginUser(res.data.user)
             navigate('/')
